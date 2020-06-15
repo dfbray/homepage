@@ -1,0 +1,15 @@
+.sidenavItem {
+  justify-content: center;
+  padding: 5px;
+}
+
+.sidenav {
+  min-height: 100%;
+}
+
+.sidenavSocial {
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 30;
+  width: 30;
+}

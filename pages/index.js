@@ -13,7 +13,7 @@ export default function Home() {
         <title>Home - Dylan Bray</title>
       </Head>
 
-      <Container>
+      <Container fluid>
       <Jumbotron fluid>
         <Container>
           <h1>Hello, world!</h1>
