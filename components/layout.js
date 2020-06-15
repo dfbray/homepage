@@ -7,6 +7,8 @@ import Nav from 'react-bootstrap/Nav'
 import { SocialIcon } from 'react-social-icons';
 import Sidebar from './sidebar'
 
+import styles from './layout.module.css'
+
 export default function Layout({ children }) {
   return(
     <>
@@ -32,7 +34,7 @@ export default function Layout({ children }) {
           <Sidebar/>
         </Col>
         <Col md="auto" xs={12} style={{'flex': '1'}}>
-          <main style={{'min-height': 'calc(100vh - 56px - 66px)'}}>
+          <main style={{'min-height': 'calc(100vh - 56px - 90px)'}}>
             {children}
           </main>
         </Col>
@@ -40,21 +42,19 @@ export default function Layout({ children }) {
 
       <footer>
         <Navbar bg="light" >
-          <Col xs={4}>
-          </Col>
-          <Col xs={4}>
-            <Row className="justify-content-center">
-              <SocialIcon bgColor="#D3D3D3" url="https://github.com/dfbray/" />
-              <SocialIcon bgColor="#D3D3D3" url="https://www.linkedin.com/in/dfbray/" />
-              <SocialIcon bgColor="#D3D3D3" url="https://twitter.com/thedylanbray/" />
-              <SocialIcon bgColor="#D3D3D3" url="mailto://lol@youcantemail.me" />
-            </Row>
-          </Col>
-          <Col xs={4} >
-          <Container fluid className="justify-content-end">
-            Created With Next.js and React-Bootstrap
-            </Container>
-          </Col>
+          <Container>
+            <Col md={12}>
+              <Row className="justify-content-center">
+                <SocialIcon className={styles.footerSocial} bgColor="#D3D3D3" url="https://github.com/dfbray/" />
+                <SocialIcon className={styles.footerSocial} bgColor="#D3D3D3" url="https://www.linkedin.com/in/dfbray/" />
+                <SocialIcon className={styles.footerSocial} bgColor="#D3D3D3" url="https://twitter.com/thedylanbray/" />
+                <SocialIcon className={styles.footerSocial} bgColor="#D3D3D3" url="mailto://lol@youcantemail.me" />
+              </Row >
+              <Row className="justify-content-center">
+                Created With Next.js and React-Bootstrap
+              </Row >
+            </Col>
+          </Container>
         </Navbar>
       </footer>
 
